@@ -19,7 +19,7 @@
 - Check emptiness and nullness before operations on collections and strings.
 - Avoid methods using `throws` clause; prefer unchecked exceptions.
 
-- Avoid comments.
+- Avoid inline/block comments.
 - Comments could be applied for: cron expressions, Regex patterns, TODOs or given/when/then separation in tests.
 - Use `@Override` annotation when overriding methods.
 - Avoid `Objects.isNull` and `Objects.nonNull` for checks on one or two variables; prefer direct null checks for better performance.
