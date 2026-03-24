@@ -1,9 +1,9 @@
 ## Code Formatting
 
-- Indentation: 4 spaces.
+- Use Google default code style for Java.
+- Indentation: 2 spaces (Google Java Style).
 - Blank Lines: Use to separate logical blocks of code.
 - Line Length: Maximum 100 characters.
-- Use Google default code style for Java.
 
 ## Java Style
 
