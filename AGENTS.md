@@ -1,4 +1,4 @@
-## Code Fromatting
+## Code Formatting
 
 - Indentation: 4 spaces.
 - Blank Lines: Use to separate logical blocks of code.
@@ -12,8 +12,9 @@
 - Avoid `var` keyword, prefer explicit types.
 - All method parameters should be `final`.
 - All variables should be declared as `final` where possible.
-- Preference for immutability:
-- Avoid mutations of objects, specially when using for-each loops or Stream API using `forEach()`.
+
+- Preference for immutability
+- Avoid mutations of objects, especially when using for-each loops or Stream API using `forEach()`.
 - Avoid magic numbers and strings; use constants instead.
 - Check emptiness and nullness before operations on collections and strings.
 - Avoid methods using `throws` clause; prefer unchecked exceptions.
@@ -21,8 +22,8 @@
 - Avoid comments.
 - Comments could be applied for: cron expressions, Regex patterns, TODOs or given/when/then separation in tests.
 - Use `@Override` annotation when overriding methods.
-- Avoid Objects.*isNull() and Objects.*nonNull() for one or two variables; prefer direct null checks for better performance.
-- Wrap multiple conditions in a boolean variable for better readibility
+- Avoid `Objects.isNull` and `Objects.nonNull` for checks on one or two variables; prefer direct null checks for better performance.
+- Wrap multiple conditions in a boolean variable for better readability
 - Prefer early returns.
 - Avoid else statements when not necessary and try early returns.
 - Add clear, concise, developer-centric javadoc to all methods.
@@ -31,7 +32,7 @@
 
 - Use `@RequiredArgsConstructor` from Lombok for dependency injection via constructor.
 - Use `@Slf4j` from Lombok for logging.
-- Use `@Builder(setterPrefix = "with"))` for complex object creation.
+- Use `@Builder(setterPrefix = "with")` for complex object creation.
 - Avoid `@Data` annotation; prefer `@Getter` and `@Setter` for granular control.
 
 ## Annotations
@@ -52,7 +53,7 @@
 
 **Use MapStruct**
 
-- MapFor mapping between DTOs and entities.
+- Use mappers for conversion between DTOs and entities.
 - Define mapper interfaces with `@Mapper` annotation.
 - Use `@Mapping` annotation for custom field mappings.
 - Use `componentModel = "spring"` to allow Spring to manage mapper instances.
@@ -104,6 +105,11 @@
 - Logging info code could follow this template: log.info("[MicroserviceName/ModuleName] - API-CALL/METHOD/ACTION: response: {}, userId: {}", body, userId);
 - Logging error code could follow this template: log.error("[MicroserviceName/ModuleName] - API-CALL/METHOD/ACTION: errorMessage: {}, userId: {}", errorMessage, userId);
 
+## Validation
+
+- Validate all user input
+- Use bean validation
+
 ## Database Migrations
 
 **Use Liquibase**
@@ -112,9 +118,13 @@
 - Use `date +%s%3N` as identifier for migrations/changelogs
 - Use rollbacks in case of failing migrations/changelogs
 - Use consistent ordering
+- Use indexes where necessary
+- Use constraints where necessary
+- Optimize for performance
 
 ## Committing
 
 - Use conventional commits
 - Commit message length: 80 characters maximum
 - Emojis: Not allowed
+
